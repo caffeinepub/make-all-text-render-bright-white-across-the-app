@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.625rem;
+        --background: 0.18 0.08 152;
+        --foreground: 1.0 0 0;
+        --card: 0.22 0.09 152;
+        --card-foreground: 1.0 0 0;
+        --popover: 0.22 0.09 152;
+        --popover-foreground: 1.0 0 0;
+        --primary: 0.85 0.02 152;
+        --primary-foreground: 0.18 0.08 152;
+        --secondary: 0.28 0.10 152;
+        --secondary-foreground: 1.0 0 0;
+        --muted: 0.28 0.10 152;
+        --muted-foreground: 1.0 0 0;
+        --accent: 0.32 0.11 152;
+        --accent-foreground: 1.0 0 0;
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 1.0 0 0;
+        --border: 0.35 0.08 152;
+        --input: 0.35 0.08 152;
+        --ring: 0.65 0.03 152;
+        --chart-1: 0.55 0.15 160;
+        --chart-2: 0.60 0.12 180;
+        --chart-3: 0.50 0.14 140;
+        --chart-4: 0.65 0.13 200;
+        --chart-5: 0.58 0.16 120;
+    }
+
+    .dark {
+        --background: 0.18 0.08 152;
+        --foreground: 1.0 0 0;
+        --card: 0.22 0.09 152;
+        --card-foreground: 1.0 0 0;
+        --popover: 0.26 0.10 152;
+        --popover-foreground: 1.0 0 0;
+        --primary: 0.85 0.02 152;
+        --primary-foreground: 0.18 0.08 152;
+        --secondary: 0.28 0.10 152;
+        --secondary-foreground: 1.0 0 0;
+        --muted: 0.28 0.10 152;
+        --muted-foreground: 1.0 0 0;
+        --accent: 0.32 0.11 152;
+        --accent-foreground: 1.0 0 0;
+        --destructive: 0.704 0.191 22.216;
+        --destructive-foreground: 1.0 0 0;
+        --border: 0.35 0.08 152;
+        --input: 0.35 0.08 152;
+        --ring: 0.65 0.03 152;
+        --chart-1: 0.55 0.15 160;
+        --chart-2: 0.60 0.12 180;
+        --chart-3: 0.50 0.14 140;
+        --chart-4: 0.65 0.13 200;
+        --chart-5: 0.58 0.16 120;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        background-image: url('/assets/generated/forest-green-leaf-texture.dim_2048x2048.png');
+        background-size: 400px 400px;
+        background-repeat: repeat;
+        background-attachment: fixed;
+    }
+    
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, oklch(var(--background) / 0.95), oklch(var(--background) / 0.98));
+        pointer-events: none;
+        z-index: -1;
+    }
+}

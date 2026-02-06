@@ -1,0 +1,176 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "Greenwood High career exploration web app scaffolded with a Motoko backend canister and a React + Vite + Tailwind frontend, including Internet Identity auth, career quiz/explore pages, mentors/videos/resources sections, and a school timeline UI with generated placeholder assets.",
+  "existing_features": [
+    {
+      "id": "IF-1",
+      "title": "Motoko backend canister scaffold",
+      "synonyms": [
+        "backend canister",
+        "Motoko core"
+      ],
+      "description": "Backend service implemented in Motoko with generated Candid bindings and frontend declarations for canister interaction.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-2",
+      "title": "React + Vite + Tailwind frontend scaffold",
+      "synonyms": [
+        "frontend app",
+        "Vite React app"
+      ],
+      "description": "Frontend application bootstrapped with Vite, Tailwind CSS, shared app layout/components, and routing/pages structure.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-3",
+      "title": "Internet Identity authentication integration",
+      "synonyms": [
+        "II auth",
+        "ICP login"
+      ],
+      "description": "Client-side hooks and logic to authenticate users via Internet Identity and create an authenticated canister actor.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-4",
+      "title": "Career exploration pages and data",
+      "synonyms": [
+        "Explore Careers",
+        "Career Quiz"
+      ],
+      "description": "Career quiz and career exploration pages backed by local data modules for careers and quiz content.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-5",
+      "title": "Mentor connections and profiles UI",
+      "synonyms": [
+        "Mentors feature"
+      ],
+      "description": "Mentor connections page and mentor profile page with supporting hooks for fetching/handling mentors.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-6",
+      "title": "Videos browsing and detail UI",
+      "synonyms": [
+        "Videos feature"
+      ],
+      "description": "Videos listing page and video detail page with a safe embed component and a videos hook.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-7",
+      "title": "Resources and school timeline pages",
+      "synonyms": [
+        "Resources page",
+        "School timeline"
+      ],
+      "description": "Resources page and a school timeline page for students to track milestones/checkpoints.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-8",
+      "title": "Reusable UI components and utilities",
+      "synonyms": [
+        "App components",
+        "UI utilities"
+      ],
+      "description": "Shared UI components (layout, animated sections, copy blocks, multi-select, navigation) plus storage client and config modules.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-9",
+      "title": "Build template and tooling for ICP deployment",
+      "synonyms": [
+        "build template",
+        "deployment tooling"
+      ],
+      "description": "Included build-template project configuration (Dockerfile, deploy script, canister YAMLs, workspace configs) and image utility scripts for resizing/pruning assets.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-10",
+      "title": "Generated placeholder visual assets",
+      "synonyms": [
+        "generated images",
+        "placeholder graphics"
+      ],
+      "description": "Generated PNG assets included for branding/backgrounds and UI icon sets.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-global-theme-text-color-tokens-so-that-all-standard-text-colors-render-as-bright-white-across-the-entire-ui-including-default-text-muted-text-and-component-foreground-variants",
+      "title": "Update the global theme text color tokens so that all standard text colors render as bright white across the entire UI (including default text, muted text, and component foreground variants).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-audit-and-update-any-hard-coded-non-white-text-utility-classes-in-the-app-s-components-pages-so-they-also-render-bright-white-e-g-any-text-red-text-gray-or-similar-explicit-color-utilities",
+      "title": "Audit and update any hard-coded non-white text utility classes in the app’s components/pages so they also render bright white (e.g., any `text-red-*`, `text-gray-*`, or similar explicit color utilities).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Update global typography styling so all font/text colors render as bright white across the app UI.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "architectural_notes": [
+    "Architecture: ICP dapp with Motoko backend canister + React/Vite/Tailwind frontend, connected via generated Candid bindings.",
+    "Auth: Uses Internet Identity on the frontend; authenticated actor created via hooks to call the backend canister.",
+    "UI stack: shadcn-ui component set included in build-template; app uses shared layout/nav components and page-based routing structure.",
+    "Assets pipeline: build-template includes scripts to resize/prune images; generated placeholder PNGs stored under frontend/public/assets/generated."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "generatedImages": [
+    {
+      "filename": "frontend/public/assets/generated/forest-green-leaf-texture.dim_2048x2048.png",
+      "description": "Generated background/texture placeholder asset",
+      "targetWidth": 2048,
+      "targetHeight": 2048
+    },
+    {
+      "filename": "frontend/public/assets/generated/greenwood-high-logo-placeholder.dim_512x512.png",
+      "description": "Generated placeholder logo asset",
+      "targetWidth": 512,
+      "targetHeight": 512
+    },
+    {
+      "filename": "frontend/public/assets/generated/mindmap-icons-set.dim_1024x1024.png",
+      "description": "Generated icon set used for mindmap/navigation concepts",
+      "targetWidth": 1024,
+      "targetHeight": 1024
+    },
+    {
+      "filename": "frontend/public/assets/generated/timeline-checkpoints-set.dim_1024x1024.png",
+      "description": "Generated checkpoint icon set for the school timeline UI",
+      "targetWidth": 1024,
+      "targetHeight": 1024
+    }
+  ],
+  "projectName": "Make all text render bright white across the app",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

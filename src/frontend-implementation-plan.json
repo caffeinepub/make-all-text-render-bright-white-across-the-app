@@ -1,0 +1,59 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Render all app text as bright white via theme tokens and utility audit",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Update global theme text color tokens so all theme-driven text renders as bright/pure white across the UI.",
+      "acceptanceCriteria": [
+        "The Tailwind `text-foreground` color renders as pure/bright white on all pages.",
+        "Tailwind classes that currently render non-white text via theme tokens (e.g., `text-muted-foreground`, `text-card-foreground`, `text-popover-foreground`, etc.) now render bright white as well.",
+        "No page shows gray/green-tinted body text due to theme variables; text is consistently bright white in both normal and dark mode."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Set theme CSS variables for `--foreground`, `--muted-foreground`, and all `* -foreground` variants (e.g., card/popover/secondary/accent/primary/destructive foreground tokens) to pure white (OKLCH white) in both `:root` and `.dark`, ensuring Tailwind theme tokens like `text-foreground`, `text-muted-foreground`, `text-card-foreground`, and `text-popover-foreground` render bright white consistently."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Remove/replace hard-coded non-white Tailwind text color utilities so all visible text (including links, icons, and footer attribution) renders bright white.",
+      "acceptanceCriteria": [
+        "No visible text uses hard-coded non-white Tailwind text colors anywhere in the app UI.",
+        "The footer attribution line (including the heart icon/text) renders in bright white.",
+        "Links and hover states remain readable and do not introduce non-white text colors."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Replace hard-coded non-white text utilities in the footer (e.g., the `text-red-500` heart and any other explicit non-white text colors) with bright-white theme tokens (e.g., `text-foreground`) so the entire attribution line renders bright white while keeping hover states readable."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Update hard-coded non-white text utility usage for visible text elements (notably links currently using `text-primary`) to use bright-white theme tokens (e.g., `text-foreground` and appropriate hover/underline utilities) so links remain readable without introducing non-white text colors."
+        },
+        {
+          "path": "frontend/src/pages/SchoolTimelinePage.tsx",
+          "operation": "modify",
+          "description": "Update the external registration link styling that currently uses a hard-coded non-white text utility (e.g., `text-primary`) to use bright-white theme tokens (e.g., `text-foreground`) while preserving hover/underline readability."
+        },
+        {
+          "path": "frontend/src/components/SafeVideoEmbed.tsx",
+          "operation": "modify",
+          "description": "Update the fallback link styling that currently uses a hard-coded non-white text utility (e.g., `text-primary`) to use bright-white theme tokens (e.g., `text-foreground`) while preserving hover/underline readability."
+        },
+        {
+          "path": "frontend/src/components/MindmapNav.tsx",
+          "operation": "modify",
+          "description": "Update any hard-coded non-white icon/text utilities (e.g., `text-primary` on step icons and similar) to use bright-white theme tokens (e.g., `text-foreground`) so navigation tiles render consistently bright white."
+        }
+      ]
+    }
+  ]
+}

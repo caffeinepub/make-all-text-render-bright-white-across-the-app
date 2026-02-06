@@ -1,0 +1,62 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-05T13:43:54.367Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 2,
+    "implemented": 2,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Update the global theme text color tokens so that all standard text colors render as bright white across the entire UI (including default text, muted text, and component foreground variants).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/index.css"
+        ],
+        "matchedFiles": [
+          "frontend/src/index.css"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Audit and update any hard-coded non-white text utility classes in the app’s components/pages so they also render bright white (e.g., any `text-red-*`, `text-gray-*`, or similar explicit color utilities).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Footer.tsx",
+          "frontend/src/pages/HomePage.tsx",
+          "frontend/src/pages/SchoolTimelinePage.tsx",
+          "frontend/src/components/SafeVideoEmbed.tsx",
+          "frontend/src/components/MindmapNav.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Footer.tsx",
+          "frontend/src/pages/HomePage.tsx",
+          "frontend/src/pages/SchoolTimelinePage.tsx",
+          "frontend/src/components/SafeVideoEmbed.tsx",
+          "frontend/src/components/MindmapNav.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "build-template/README.md",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/MindmapNav.tsx",
+    "frontend/src/components/SafeVideoEmbed.tsx",
+    "frontend/src/index.css",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/SchoolTimelinePage.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

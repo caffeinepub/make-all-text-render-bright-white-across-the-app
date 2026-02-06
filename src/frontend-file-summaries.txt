@@ -1,0 +1,10 @@
+{
+  "frontend/src/pages/SchoolTimelinePage.tsx": "Interactive roadmap-style timeline page displaying Greenwood High exam schedules and country-specific university admission guidance with all text rendered in bright white.",
+  "frontend/src/index.css": "Global styles with OKLCH-based dark forest green color system, background texture overlay, and all foreground text color tokens set to pure bright white (OKLCH 1.0 0 0) for consistent white text rendering across the application.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending the theme with forest green color tokens, custom animations, Inter font family, and plugins for typography and container queries.",
+  "frontend/src/main.tsx": "Application entry point that sets up React Query, Internet Identity provider, and renders the root App component with Sonner toast notifications.",
+  "frontend/src/components/Footer.tsx": "Footer component displaying Greenwood High branding, contact information (email, phone, address), and attribution line with all text rendered in bright white using theme tokens.",
+  "frontend/src/pages/HomePage.tsx": "Home page featuring hero section, mindmap navigation, university preparation information, opportunities list, and counsellor contact cards with all text rendered in bright white.",
+  "frontend/src/components/SafeVideoEmbed.tsx": "Video embed component that safely displays YouTube and Vimeo videos with fallback link, all text rendered in bright white.",
+  "frontend/src/components/MindmapNav.tsx": "Navigation component displaying five career journey steps as interactive cards with icons and descriptions, all text and icons rendered in bright white."
+}

@@ -1,0 +1,47 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-05T13:43:54.330Z",
+  "summary": "REQ-1 appears implemented by setting multiple theme foreground-related CSS variables to bright white in `frontend/src/index.css`. REQ-2 is only partially evidenced: a few components/pages were updated to use `text-foreground`, but the diff does not demonstrate a comprehensive audit/removal of all hard-coded non-white Tailwind text color utilities across the entire app.",
+  "missing_requirements": [
+    {
+      "id": "REQ-2",
+      "requirement": "Audit and update any hard-coded non-white text utility classes in the app’s components/pages so they also render bright white (e.g., any `text-red-*`, `text-gray-*`, or similar explicit color utilities).",
+      "reason": "The diff shows updates in a limited set of files (Footer, MindmapNav, SafeVideoEmbed, and a couple pages), but does not provide evidence that all components/pages were audited or that all hard-coded non-white text utilities across the app were removed/updated.",
+      "evidence": [
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/components/MindmapNav.tsx",
+        "frontend/src/components/SafeVideoEmbed.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/SchoolTimelinePage.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Broad global palette/background styling changes (forest-green OKLCH token system, background texture, and overlay gradient) beyond strictly making text bright white.",
+      "reason": "The BuildRequest non-goals state not to change background colors/textures beyond what is necessary for font color changes, but `index.css` includes extensive background and token changes (background, card, popover, accent, etc.) plus a texture and gradient overlay.",
+      "evidence": [
+        "frontend/src/index.css"
+      ]
+    },
+    {
+      "description": "Footer content/structure changes adding detailed contact sections (icons, email/phone/address blocks) rather than only ensuring existing footer attribution/heart renders bright white.",
+      "reason": "REQ-2 specifically calls out the footer attribution line (including heart) rendering bright white, but the diff shows a fully built-out contact footer layout; this is UI/content expansion not explicitly requested.",
+      "evidence": [
+        "frontend/src/components/Footer.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.62,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/MindmapNav.tsx",
+    "frontend/src/components/SafeVideoEmbed.tsx",
+    "frontend/src/index.css",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/SchoolTimelinePage.tsx",
+    "project_state.json"
+  ]
+}

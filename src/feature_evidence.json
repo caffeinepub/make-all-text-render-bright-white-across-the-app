@@ -1,0 +1,45 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-global-theme-text-color-tokens-so-that-all-standard-text-colors-render-as-bright-white-across-the-entire-ui-including-default-text-muted-text-and-component-foreground-variants",
+      "featureTitle": "Update the global theme text color tokens so that all standard text colors render as bright white across the entire UI (including default text, muted text, and component foreground variants).",
+      "files": [
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-audit-and-update-any-hard-coded-non-white-text-utility-classes-in-the-app-s-components-pages-so-they-also-render-bright-white-e-g-any-text-red-text-gray-or-similar-explicit-color-utilities",
+      "featureTitle": "Audit and update any hard-coded non-white text utility classes in the app’s components/pages so they also render bright white (e.g., any `text-red-*`, `text-gray-*`, or similar explicit color utilities).",
+      "files": [
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/components/MindmapNav.tsx",
+        "frontend/src/components/SafeVideoEmbed.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/SchoolTimelinePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

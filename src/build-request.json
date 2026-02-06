@@ -1,0 +1,65 @@
+{
+  "kind": "build_request",
+  "title": "Make all text render bright white across the app",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Update the global theme text color tokens so that all standard text colors render as bright white across the entire UI (including default text, muted text, and component foreground variants).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages-4"
+        ],
+        "quotes": [
+          "change all the font colours to white. bright white"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The Tailwind `text-foreground` color renders as pure/bright white on all pages.",
+        "Tailwind classes that currently render non-white text via theme tokens (e.g., `text-muted-foreground`, `text-card-foreground`, `text-popover-foreground`, etc.) now render bright white as well.",
+        "No page shows gray/green-tinted body text due to theme variables; text is consistently bright white in both normal and dark mode."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Audit and update any hard-coded non-white text utility classes in the app’s components/pages so they also render bright white (e.g., any `text-red-*`, `text-gray-*`, or similar explicit color utilities).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages-4"
+        ],
+        "quotes": [
+          "change all the font colours to white. bright white"
+        ]
+      },
+      "acceptanceCriteria": [
+        "No visible text uses hard-coded non-white Tailwind text colors anywhere in the app UI.",
+        "The footer attribution line (including the heart icon/text) renders in bright white.",
+        "Links and hover states remain readable and do not introduce non-white text colors."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files under frontend/src/components/ui (Shadcn UI sources must be composed, not edited).",
+    "Keep changes limited to styling/utility usage; do not alter app behavior, routing, or backend APIs."
+  ],
+  "nonGoals": [
+    "Changing background colors, textures, or layout beyond what is necessary to make text bright white.",
+    "Rebranding or redesigning the UI beyond font color changes."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}
